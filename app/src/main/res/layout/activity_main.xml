@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<!-- LINIE -->
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:layout_marginTop="45dp"
+        android:background="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="75dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginBottom="35dp"
+        android:background="#000"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Główne widoki -->
+    <ViewFlipper
+        android:id="@+id/Setting_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+        <RelativeLayout
+            android:id="@+id/co_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_tempsett"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="234dp"
+                android:layout_marginBottom="128dp"
+                android:background="#FFF"
+                android:text="50"
+                android:textAlignment="center"
+                android:textSize="125dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="242dp"
+                android:layout_marginTop="77dp"
+                android:text="SET DAY MODE"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_tempplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="414dp"
+                android:layout_marginTop="128dp"
+                android:text="+"
+                android:textSize="50dp" />
+
+
+            <Button
+                android:id="@+id/button_tempminus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="414dp"
+                android:layout_marginBottom="121dp"
+                android:text="-"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/textview_tempsett2"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="561dp"
+                android:layout_marginBottom="129dp"
+                android:background="#FFF"
+                android:text="50"
+                android:textAlignment="center"
+                android:textSize="125dp" />
+
+            <Button
+                android:id="@+id/button_tempplus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="743dp"
+                android:layout_marginTop="128dp"
+                android:text="+"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/button_tempminus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="743dp"
+                android:layout_marginBottom="121dp"
+                android:text="-"
+                android:textSize="50dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="559dp"
+                android:layout_marginTop="77dp"
+                android:text="SET NIGHT MODE"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="95dp"
+                android:layout_marginBottom="95dp"
+                android:src="@drawable/termometr" />
+
+            <TextView
+                android:id="@+id/button_costartstop"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="876dp"
+                android:layout_marginBottom="163dp"
+                android:gravity="center"
+                android:text="STOP"
+                android:textColor="#000000"
+                android:textSize="35dp"
+                android:textStyle="italic" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/co_pb"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateDrawable="@drawable/progressbar_anim1"
+                android:indeterminateDuration="2000"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="143dp" />
+
+            <ProgressBar
+                android:id="@+id/co_pb2"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="143dp"
+                android:indeterminateDrawable="@drawable/progressbar_anim2" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/work_mode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TimePicker
+                android:id="@+id/tp_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="94dp"
+                android:scaleX="1.59"
+                android:scaleY="1.59"
+                android:timePickerMode="clock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/work_end"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="174dp"
+                android:layout_marginEnd="97dp"
+                android:layout_marginRight="100dp"
+                android:text="SET END"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/button_work_apply"
+                android:layout_width="180dp"
+                android:layout_height="65dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="97dp"
+                android:layout_marginBottom="62dp"
+                android:background="#00CC00"
+                android:text="APPLY"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/work_start"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="97dp"
+                android:layout_marginRight="100dp"
+                android:text="SET START"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TimePicker
+                android:id="@+id/zegar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="94dp"
+                android:scaleX="1.59"
+                android:scaleY="1.59"
+                android:timePickerMode="clock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_time"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="100dp"
+                android:text="SET TIME"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="128dp"
+                android:layout_marginBottom="62dp"
+                android:src="@drawable/wakacje" />
+
+            <TextView
+                android:id="@+id/textview_holiday"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="369dp"
+                android:layout_marginBottom="163dp"
+                android:background="#FFF"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="80dp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="37dp"
+                android:layout_marginBottom="318dp"
+                android:text="How long will you be away?"
+                android:textAlignment="center"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/plushundred"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="369dp"
+                android:layout_marginTop="93dp"
+                android:text="+100"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/plusten"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="469dp"
+                android:layout_marginTop="93dp"
+                android:text="+10"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/plusone"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="569dp"
+                android:layout_marginTop="93dp"
+                android:text="+1"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/minusone"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="569dp"
+                android:layout_marginTop="269dp"
+                android:text="-1"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/minushundred"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="369dp"
+                android:layout_marginTop="269dp"
+                android:text="-100"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/minusten"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="469dp"
+                android:layout_marginTop="269dp"
+                android:text="-10"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/holiday_apply"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="153dp"
+                android:layout_marginBottom="140dp"
+                android:text="APPLY"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cwu_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="47dp"
+                android:layout_marginTop="95dp"
+                android:layout_marginBottom="95dp"
+                android:src="@drawable/water" />
+
+            <TextView
+                android:id="@+id/textview_wodasett"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="422dp"
+                android:layout_marginBottom="129dp"
+                android:background="#FFF"
+                android:text="50"
+                android:textAlignment="center"
+                android:textSize="125dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="326dp"
+                android:layout_marginBottom="300dp"
+                android:text="SET WATER TEMPERATURE"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_wodaplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="602dp"
+                android:layout_marginTop="128dp"
+                android:text="+"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/button_wodaminus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="602dp"
+                android:layout_marginBottom="124dp"
+                android:text="-"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/button_cwustartstop"
+                android:layout_width="107dp"
+                android:layout_height="108dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="813dp"
+                android:layout_marginBottom="159dp"
+                android:gravity="center"
+                android:text="STOP"
+                android:textSize="35dp"
+                android:textStyle="italic" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/cwu_pb"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateDrawable="@drawable/progressbar_anim1"
+                android:indeterminateDuration="2000"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="86dp"
+                android:layout_marginBottom="144dp" />
+
+            <ProgressBar
+                android:id="@+id/cwu_pb2"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="86dp"
+                android:layout_marginBottom="144dp"
+                android:indeterminateDrawable="@drawable/progressbar_anim2" />
+        </RelativeLayout>
+
+    </ViewFlipper>
+
+<!-- END of mine View -->
+
+<!-- Buttony NEXT I PREVIOUS -->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="225dp"
+        android:layout_height="75dp"
+        android:background="#555"
+        android:onClick="previousView"
+        android:text="PREVIOUS"
+        android:textColor="#FFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <!-- SETTINGS -->
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="225dp"
+        android:layout_height="75dp"
+        android:background="#555"
+        android:onClick="nextView"
+        android:text="NEXT"
+        android:textColor="#FFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/frontpanel"
+        android:layout_width="335dp"
+        android:layout_height="75dp"
+        android:background="#555"
+        android:text="EXIT TO MAIN PANEL"
+        android:textColor="#FFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/sett"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="11dp"
+        android:text="SETTINGS"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- AKTUALNA GODZINA-->
+    <TextView
+        android:id="@+id/textview_godzina"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="hh:mm:ss"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!-- MENU -->
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/holiday"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:text="HOLIDAY"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/cwu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#777"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/cwu"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:text="CWU"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/co"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/holiday"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#777"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/co"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:text="CO"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/work"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cwu"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#777"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/work"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:text="WORK MODE"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/clock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/co"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#777"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/clock"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:text="CLOCK"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/work"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#777"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tlo"
+    android:orientation="vertical">
+
+    <!-- MENU -->
+
+    <Button
+        android:id="@+id/option"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/button_style"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="MENU"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968" />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/turnoff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/arrow1"
+        android:onClick="nextView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="784dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/arrow"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/arrow2"
+        android:onClick="previousView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="660dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/arrow"
+        android:rotation="270"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="PANEL PIECA Gog_Gub"
+        android:textColor="#FFBF00"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/godzina"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="hh:mm:ss"
+        android:textColor="#FFBF00"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="900dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="68dp"
+        android:background="#FFBF00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/MainFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/temp_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="189dp"
+                android:layout_marginTop="93dp"
+                android:text="20.5"
+                android:textColor="#FFBF00"
+                android:textSize="120dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="430dp"
+                android:layout_marginTop="113dp"
+                android:text="°C"
+                android:textColor="#FFBF00"
+                android:textSize="60dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="315dp"
+                android:text="SET TEMPERATURE"
+                android:textColor="#FFBF00"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/temp_zad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="288dp"
+                android:text="50°C"
+                android:textColor="#FFBF00"
+                android:textSize="65sp" />
+
+            <ImageView
+                android:id="@+id/mode"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="101dp"
+                android:layout_marginBottom="43dp"
+                android:src="@drawable/sun" />
+
+            <ImageView
+                android:id="@+id/co_house"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="720dp"
+                android:layout_marginBottom="128dp"
+                android:src="@drawable/cold" />
+
+            <TextView
+                android:id="@+id/cowork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="25dp"
+                android:text="CO MODE:"
+                android:textColor="#FFBF00"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cwu_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="189dp"
+                android:layout_marginTop="93dp"
+                android:text="20.5"
+                android:textColor="#FFBF00"
+                android:textSize="120dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="430dp"
+                android:layout_marginTop="113dp"
+                android:text="°C"
+                android:textColor="#FFBF00"
+                android:textSize="60dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="315dp"
+                android:text="SET TEMPERATURE"
+                android:textColor="#FFBF00"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/cwu_zad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="199dp"
+                android:layout_marginTop="287dp"
+                android:text="TEMP"
+                android:textColor="#FFBF00"
+                android:textSize="65sp" />
+
+            <ImageView
+                android:id="@+id/cwu_house"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="720dp"
+                android:layout_marginBottom="128dp"
+                android:src="@drawable/cold" />
+
+            <TextView
+                android:id="@+id/cwu_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="25dp"
+                android:text="CWU MODE:"
+                android:textColor="#FFBF00"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/wateruse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="74dp"
+                android:text="Let's use some water" />
+
+        </RelativeLayout>
+    </ViewFlipper>
+
+    <FrameLayout
+        android:id="@+id/holiday_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
